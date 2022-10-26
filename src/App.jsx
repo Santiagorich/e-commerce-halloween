@@ -1,10 +1,15 @@
+import Header from './components/Header/Header'
+import MainSwiper from './components/MainSwiper/MainSwiper'
+import 'swiper/css/bundle'
+
 function App () {
   return (
-    <main className='grid min-h-screen place-content-center'>
-      <h1 className='text-3xl font-bold'>
-        React + Tailwind + Standard
-      </h1>
-    </main>
+    <div className=' max-w-screen-lg mx-auto px-4'>
+      <Header />
+      <div className='mt-20'>
+        <MainSwiper />
+      </div>
+    </div>
   )
 }
 
