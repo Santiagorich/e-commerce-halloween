@@ -1,5 +1,9 @@
 function Hero () {
-  return <div>Mi primer cambio pero ahora bien hecho</div>
+  return (
+    <div>
+      <h1>Hola mundo</h1>
+    </div>
+  )
 }
 
 export default Hero
