@@ -9,3 +9,5 @@
 - Style Guide Standard: [Standard](https://github.com/standard)
 - Tailwind: [Tailwind](https://tailwindcss.com/docs/installation)
 - Auto sort class to Tailwind: [Plugin Prettier](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
+
+Cloned for preview
