@@ -51,6 +51,10 @@ body {
     animation: updown 2s ease-in-out infinite;
 }
 
+.productcont {
+    background: var(--container-color);
+}
+
 @keyframes updown {
     0% {
         transform: translateY(0);
