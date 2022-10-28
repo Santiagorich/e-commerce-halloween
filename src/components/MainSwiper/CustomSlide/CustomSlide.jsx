@@ -1,8 +1,9 @@
 import React from 'react'
+import OrangeButton from '../../OrangeButton'
 
 function CustomSlide ({ img, title, imgdesc }) {
   return (
-    <div className='grid grid-cols-2'>
+    <div className='grid grid-cols-2 '>
       <div className='flex justify-center relative'>
         <img src={img} alt='' className='updown h-96' />
         <div className='flex flex-row absolute bottom-0 left-20 mx-auto items-end'>
@@ -30,9 +31,7 @@ function CustomSlide ({ img, title, imgdesc }) {
           pasar de JS plano a una aplicación de React con
           muchas funcionalidades extra.
         </span>
-        <div className='flex flex-row justify-between mt-4'>
-          <button className=' bg-orange-600 py-4 px-6 rounded-lg text-lg font-semibold'>Reservar Ahora</button>
-        </div>
+       <OrangeButton text={"Reservar Ahora"}></OrangeButton>
       </div>
 
     </div>

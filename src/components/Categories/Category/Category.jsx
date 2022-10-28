@@ -7,7 +7,7 @@ function Category({img, title, desc}) {
         src={img}
         className=" mx-auto h-52 transition-all duration-300 hover:-translate-y-4"
       />
-      <h3 className="text-lg font-semibold">{title}</h3>
+      <span className="text-lg font-semibold">{title}</span>
       <p>{desc}</p>
     </div>
   );

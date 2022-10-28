@@ -47,6 +47,10 @@ body {
     color: var(--text-color);
 }
 
+.header {
+    background: var(--body-color);
+}
+
 .updown {
     animation: updown 2s ease-in-out infinite;
 }
