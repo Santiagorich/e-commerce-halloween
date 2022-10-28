@@ -1,75 +1,44 @@
-import Header from './components/Header/Header'
-import MainSwiper from './components/MainSwiper/MainSwiper'
-import 'swiper/css/bundle'
-import ProductCard from './components/Product/ProductCard'
-import Categories from './components/Categories/Categories'
+import Header from "./components/Header/Header";
+import MainSwiper from "./components/MainSwiper/MainSwiper";
+import "swiper/css/bundle";
+import Categories from "./components/Categories/Categories";
+import ProductGrid from "./components/ProductGrid/ProductGrid";
+import Discounts from "./components/Discounts/Discounts";
+import JustArrived from "./components/JustArrived/JustArrived";
+import { Fade } from "react-awesome-reveal";
 
-
-function App () {
-  const products = [
-    {
-      img: 'assets/trick-treat4-img.png',
-      price: 10,
-      description: 'Description here'
-    },
-    {
-      img: 'assets/trick-treat4-img.png',
-      price: 10,
-      description: 'Description here'
-    },
-    {
-      img: 'assets/trick-treat4-img.png',
-      price: 10,
-      description: 'Description here'
-    },
-    {
-      img: 'assets/trick-treat4-img.png',
-      price: 10,
-      description: 'Description here'
-    },
-    {
-      img: 'assets/trick-treat4-img.png',
-      price: 10,
-      description: 'Description here'
-    },
-    {
-      img: 'assets/trick-treat4-img.png',
-      price: 10,
-      description: 'Aguacate'
-    },
-    {
-      img: 'assets/trick-treat4-img.png',
-      price: 10,
-      description: 'Aguacate'
-    },
-    {
-      img: 'assets/trick-treat4-img.png',
-      price: 10,
-      description: 'Aguacate'
-    },
-    {
-      img: 'assets/trick-treat4-img.png',
-      price: 10,
-      description: 'Aguacate'
-    },
-  ]
+function App() {
   return (
-    <div className=' max-w-screen-lg mx-auto px-4'>
+    <div className=" mx-auto mb-24 max-w-screen-lg px-4">
       <Header />
-      <div className='mt-20'>
-        <MainSwiper />
+      <div className="mt-24 flex flex-col gap-20">
+        <div>
+          <Fade
+          triggerOnce={true}>
+            <MainSwiper />
+          </Fade>
+        </div>
+        <Fade
+        triggerOnce={true}>
+          <Categories />
+        </Fade>
+        <Fade
+        triggerOnce={true}>
+          <ProductGrid></ProductGrid>
+        </Fade>
+        <Fade
+        triggerOnce={true}>
+          <Discounts></Discounts>
+        </Fade>
+        <Fade
+        triggerOnce={true}>
+          <JustArrived></JustArrived>
+        </Fade>
       </div>
-      <div className='mt-20'>
-      <Categories />
-      </div>
-      <div className='grid grid-cols-3 gap-x-16 gap-y-16 justify-center mt-40 p-24 w-fit mx-auto'>
-        {products.map((product, index) => (
-          <ProductCard key={index} {...product} />
-        ))}
-      </div>
+
       {/* Footer */}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
