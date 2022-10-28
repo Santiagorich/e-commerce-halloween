@@ -35,7 +35,22 @@ function App () {
     {
       img: 'assets/trick-treat4-img.png',
       price: 10,
-      description: 'Description here'
+      description: 'Aguacate'
+    },
+    {
+      img: 'assets/trick-treat4-img.png',
+      price: 10,
+      description: 'Aguacate'
+    },
+    {
+      img: 'assets/trick-treat4-img.png',
+      price: 10,
+      description: 'Aguacate'
+    },
+    {
+      img: 'assets/trick-treat4-img.png',
+      price: 10,
+      description: 'Aguacate'
     },
   ]
   return (
@@ -43,9 +58,10 @@ function App () {
       <Header />
       <div className='mt-20'>
         <MainSwiper />
-        <Categories />
       </div>
-      {/* Categories */}
+      <div className='mt-20'>
+      <Categories />
+      </div>
       <div className='grid grid-cols-3 gap-x-16 gap-y-16 justify-center mt-40 p-24 w-fit mx-auto'>
         {products.map((product, index) => (
           <ProductCard key={index} {...product} />
