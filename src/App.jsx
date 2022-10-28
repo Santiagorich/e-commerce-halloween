@@ -1,6 +1,7 @@
 import Header from './components/Header/Header'
 import MainSwiper from './components/MainSwiper/MainSwiper'
 import 'swiper/css/bundle'
+import Categories from './components/Categories/Categories'
 
 function App () {
   return (
@@ -8,6 +9,7 @@ function App () {
       <Header />
       <div className='mt-20'>
         <MainSwiper />
+        <Categories />
       </div>
     </div>
   )
