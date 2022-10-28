@@ -2,6 +2,8 @@ import Header from './components/Header/Header'
 import MainSwiper from './components/MainSwiper/MainSwiper'
 import 'swiper/css/bundle'
 import ProductCard from './components/Product/ProductCard'
+import Categories from './components/Categories/Categories'
+
 
 function App () {
   const products = [
@@ -41,6 +43,7 @@ function App () {
       <Header />
       <div className='mt-20'>
         <MainSwiper />
+        <Categories />
       </div>
       {/* Categories */}
       <div className='grid grid-cols-3 gap-x-16 gap-y-16 justify-center mt-40 p-24 w-fit mx-auto'>
