@@ -31,7 +31,7 @@ function CustomSlide ({ img, title, imgdesc }) {
           pasar de JS plano a una aplicación de React con
           muchas funcionalidades extra.
         </span>
-       <OrangeButton text={"Reservar Ahora"}></OrangeButton>
+        <OrangeButton text='Reservar Ahora' />
       </div>
 
     </div>
