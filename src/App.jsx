@@ -5,6 +5,7 @@ import Categories from './components/Categories/Categories'
 import ProductGrid from './components/ProductGrid/ProductGrid'
 import Discounts from './components/Discounts/Discounts'
 import JustArrived from './components/JustArrived/JustArrived'
+import Footer from './components/Footer/Footer'
 import { Fade } from 'react-awesome-reveal'
 
 function App () {
@@ -40,8 +41,7 @@ function App () {
           <JustArrived />
         </Fade>
       </div>
-
-      {/* Footer */}
+      <Footer />
     </div>
   )
 }
