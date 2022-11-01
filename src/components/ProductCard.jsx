@@ -1,11 +1,34 @@
-import React from "react";
-
-function ProductCard({ img, price, description, type = "small", tag }) {
+function ProductCard({
+  product,
+  type = "small",
+  tag,
+  cartProducts,
+  setCartProducts,
+  setCartToggled,
+}) {
   return (
     <div
       className={`productcont group relative flex ${
-        type == "big" ? `h-80 w-full` : `h-60 w-48`
+        type === "big" ? "h-80 w-full" : "h-60 w-48"
       } cursor-pointer items-center justify-center overflow-hidden rounded-3xl bg-black`}
+      onClick={() => {
+        setCartToggled(true);
+        //if the product is already in the cart, don't add it again and add 1 to the quantity
+        if (cartProducts.some((item) => item.id === product.id)) {
+          setCartProducts((prev) => {
+            return prev.map((item) => {
+              if (item.id === product.id) {
+                return { ...item, quantity: item.quantity + 1 };
+              }
+              return item;
+            });
+          });
+        } else {
+          setCartProducts((prev) => {
+            return [...prev, { ...product, quantity: 1 }];
+          });
+        }
+      }}
     >
       {tag && (
         <div className="absolute top-6 left-6 rounded-md bg-orange-600 px-2 py-1 transition-all ">
@@ -14,18 +37,22 @@ function ProductCard({ img, price, description, type = "small", tag }) {
       )}
       <div className="flex flex-col justify-center gap-2">
         <img
-          src={img}
+          src={product.img}
           alt=""
           className="mx-auto h-24 w-24 transition-all duration-300 group-hover:-translate-y-2"
         />
         <div className="flex flex-col">
-          <span className="text-center text-xl font-medium">Toffee</span>
-          <span className="text-center text-sm">{description}</span>
+          <span className="text-center text-xl font-medium">
+            {product.name}
+          </span>
+          <span className="text-center text-sm">{product.description}</span>
         </div>
-        <span className="m-2 text-center text-xl font-medium">${price}</span>
+        <span className="m-2 text-center text-xl font-medium">
+          ${product.price}
+        </span>
       </div>
 
-      {type == "big" ? (
+      {type === "big" ? (
         <div className="absolute -bottom-32 flex w-full flex-row items-center justify-center gap-4 bg-orange-600 p-2 transition-all group-hover:bottom-0">
           <span className="text-center text-lg">Agregar al carrito</span>
 
