@@ -10,7 +10,8 @@ import { Fade } from 'react-awesome-reveal'
 
 function App () {
   return (
-    <div className=' mx-auto mb-24 max-w-screen-lg px-4'>
+    <div>
+      <div className=' mx-auto mb-24 max-w-screen-lg px-4'>
       <Header />
       <div className='mt-24 flex flex-col gap-20'>
         <div>
@@ -41,7 +42,8 @@ function App () {
           <JustArrived />
         </Fade>
       </div>
-      <Footer />
+    </div>
+    <Footer />
     </div>
   )
 }
