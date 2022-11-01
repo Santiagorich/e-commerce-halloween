@@ -6,19 +6,25 @@ import 'swiper/css/pagination'
 import 'swiper/css/keyboard'
 import ProductCard from '../ProductCard'
 
-function JustArrived () {
+function JustArrived ({setCartProducts, setCartToggled,cartProducts}) {
   const products = [
     {
+      id:0,
+      name:'Toffee',
       img: 'assets/trick-treat1-img.png',
       price: 10,
       description: 'Description here'
     },
     {
+      id:1,
+      name:'Toffee',
       img: 'assets/trick-treat2-img.png',
       price: 10,
       description: 'Description here'
     },
     {
+      id:2,
+      name:'Toffee',
       img: 'assets/trick-treat3-img.png',
       price: 10,
       description: 'Description here'
@@ -57,10 +63,13 @@ function JustArrived () {
                   {chunk.map((product) => {
                     return (
                       <ProductCard
-                        key={product.title}
+                        key={product.id}
                         type='big'
                         tag='New'
-                        {...product}
+                        product={product}
+                        setCartProducts={setCartProducts}
+                        setCartToggled={setCartToggled}
+                        cartProducts={cartProducts}
                       />
                     )
                   })}

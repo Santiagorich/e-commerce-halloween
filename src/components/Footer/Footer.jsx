@@ -1,75 +1,64 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
   return (
-
-    <div className='flex flex-row justify-evenly gap-20 w-full mt-32'>
+    <div className="flex w-full flex-row justify-between gap-20">
       <div>
-        <img src='assets/footer2-img.png' alt='ghost' className=' mx-auto h-52 transition-all duration-300 hover:-translate-y-4' />
+        <img
+          src="assets/footer2-img.png"
+          alt="ghost"
+          className="h-52 transition-all duration-300 hover:-translate-y-2"
+        />
       </div>
-      <div>
-        <span>
-          <img src='assets/logo.png' className='mx-auto h-5' />
-        </span>
-        <h3 className='text-xl font-semibold mb-8'>Halloween</h3>
+      <div className="flex flex-col gap-4">
+        <div className="flex flex-row items-center gap-2">
+          <span>
+            <img src="assets/logo.png" className="h-5" />
+          </span>
+          <h3 className="font-semibold">Halloween</h3>
+        </div>
         <p>
-          Enjoy the scariest night
-          <br />
-          of yoy life
+          Enjoy the scariest night <br></br> of your life.
         </p>
-        <div>
-          <a href='#'>Twitter</a>
-          <a href='#'>Facebook</a>
-          <a href='#'>Instagram</a>
+        <div className="flex flex-row gap-2">
+          <a href="#" className="flex bg-black w-6 h-6 rounded-lg justify-center items-center hover:bg-orange-500">T</a>
+          <a href="#" className="flex bg-black w-6 h-6 rounded-lg justify-center items-center hover:bg-orange-500">F</a>
+          <a href="#" className="flex bg-black w-6 h-6 rounded-lg justify-center items-center hover:bg-orange-500">I</a>
         </div>
       </div>
       <div>
-        <h3 className=' text-xl font-semibold mb-8'>About</h3>
-        <ul>
-          <li>
-            <p>About us</p>
-          </li>
-          <li>
-            <p>Features</p>
-          </li>
-          <li>
-            <p>News</p>
-          </li>
-        </ul>
+        <h3 className=" mb-4 text-xl font-semibold">About</h3>
+        <div className="flex flex-col gap-2">
+          <span>About us</span>
+          <span>Features</span>
+          <span>News</span>
+        </div>
       </div>
       <div>
-        <h3 className=' text-xl font-semibold mb-8'>Our services</h3>
-        <ul>
-          <li>
-            Pricing
-          </li>
-          <li>
-            Discount
-          </li>
-          <li>
-            Shiping mode
-          </li>
-        </ul>
+        <h3 className="mb-4 text-xl font-semibold">Our services</h3>
+        <div className="flex flex-col gap-2">
+          <span>Pricing</span>
+          <span>Discounts</span>
+          <span>Shipping mode</span>
+        </div>
       </div>
       <div>
-        <h3 className=' text-xl font-semibold mb-8'>Our company</h3>
-        <ul>
-          <li>
-            <p>Blog</p>
-          </li>
-          <li>
-            <p>About us</p>
-          </li>
-          <li>
-            <p>Our mision</p>
-          </li>
-        </ul>
+        <h3 className=" mb-4 text-xl font-semibold">Our company</h3>
+        <div className="flex flex-col gap-2">
+          <span>Blog</span>
+          <span>About us</span>
+          <span>Our mision</span>
+        </div>
       </div>
       <div>
-        <img src='assets/footer1-img.png' alt='ghost' className=' mx-auto h-52 transition-all duration-300 hover:-translate-y-4' />
+        <img
+          src="assets/footer1-img.png"
+          alt="ghost"
+          className=" h-52 transition-all duration-300 hover:-translate-y-2"
+        />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

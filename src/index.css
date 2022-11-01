@@ -59,6 +59,24 @@ body {
     background: var(--container-color);
 }
 
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--container-color);
+}
+
+*::-webkit-scrollbar-thumb {
+    background: theme("colors.orange.600");
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
 @keyframes updown {
     0% {
         transform: translateY(0);
