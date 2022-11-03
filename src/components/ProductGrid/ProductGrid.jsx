@@ -6,7 +6,7 @@ function ProductGrid({ setCartProducts, setCartToggled,cartProducts }) {
       id: 0,
       name: "Toffee",
       img: "assets/trick-treat1-img.png",
-      price: 10,
+      price: 20,
       description: "Description here",
     },
     {
