@@ -6,7 +6,7 @@ function ProductGrid({ setCartProducts, setCartToggled,cartProducts }) {
       id: 0,
       name: "Toffee",
       img: "assets/trick-treat1-img.png",
-      price: 10,
+      price: 20,
       description: "Description here",
     },
     {
@@ -46,11 +46,11 @@ function ProductGrid({ setCartProducts, setCartToggled,cartProducts }) {
     },
   ];
   return (
-    <div className="flex w-full flex-col justify-center">
-      <span className="w-full text-center text-4xl font-semibold">
+    <div className="flex w-full flex-col justify-center gap-8 lg:gap-0">
+      <span className="w-full text-center text-2xl lg:text-4xl font-semibold">
         Truco o trato
       </span>
-      <div className="mx-auto grid w-fit grid-cols-3 justify-center gap-x-16 gap-y-16 p-24">
+      <div className="mx-auto grid w-fit grid-cols-2 lg:grid-cols-3 justify-center gap-x-4 gap-y-4 lg:gap-x-16 lg:gap-y-16 lg:p-24">
         {products.map((product, index) => {
           console.log(product);
           return (

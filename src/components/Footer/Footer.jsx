@@ -26,7 +26,7 @@ const Footer = () => {
           <a href="#" className="flex bg-black w-6 h-6 rounded-lg justify-center items-center hover:bg-orange-500">I</a>
         </div>
       </div>
-      <div>
+     <div className='hidden lg:block'>
         <h3 className=" mb-4 text-xl font-semibold">About</h3>
         <div className="flex flex-col gap-2">
           <span>About us</span>
@@ -34,7 +34,7 @@ const Footer = () => {
           <span>News</span>
         </div>
       </div>
-      <div>
+      <div className='hidden lg:block'>
         <h3 className="mb-4 text-xl font-semibold">Our services</h3>
         <div className="flex flex-col gap-2">
           <span>Pricing</span>
@@ -42,7 +42,7 @@ const Footer = () => {
           <span>Shipping mode</span>
         </div>
       </div>
-      <div>
+      <div className='hidden lg:block'>
         <h3 className=" mb-4 text-xl font-semibold">Our company</h3>
         <div className="flex flex-col gap-2">
           <span>Blog</span>
@@ -50,14 +50,14 @@ const Footer = () => {
           <span>Our mision</span>
         </div>
       </div>
-      <div>
+      <div className='hidden lg:block'>
         <img
           src="assets/footer1-img.png"
           alt="ghost"
           className=" h-52 transition-all duration-300 hover:-translate-y-2"
         />
       </div>
-    </div>
+     </div>
   );
 };
 

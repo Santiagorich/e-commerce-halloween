@@ -1,8 +1,9 @@
 const Cart = ({ toggled, cartProducts, setCartProducts }) => {
   return (
     <div
-      className={`productcont fixed top-0 z-10 mt-24 h-5/6 w-96 rounded-l-3xl p-2 transition-all ${
-        toggled ? 'right-0' : '-right-96'
+      className={`productcont fixed top-0 z-10 mt-24 h-4/6 lg:h-5/6 w-80 lg:w-96 rounded-l-3xl p-2 transition-all ${
+        toggled ? `right-0` : `-right-96`
+
       }`}
     >
       <div className='flex h-full flex-col justify-center gap-4 p-4'>
@@ -59,14 +60,10 @@ const Cart = ({ toggled, cartProducts, setCartProducts }) => {
                   key={product.id}
                   className='flex w-full flex-row justify-between'
                 >
-                  <div className='flex flex-row gap-4'>
-                    <img
-                      src={product.img}
-                      alt=''
-                      className='h-24 w-24'
-                    />
-                    <div className='flex flex-col gap-2'>
-                      <span className='text-xl font-medium'>
+                  <div className="flex flex-row gap-4">
+                    <img src={product.img} alt="" className="h-16 lg:h-24 w-16 lg:w-24" />
+                    <div className="flex flex-col gap-2">
+                      <span className="text-xl font-medium">
                         {product.name}
                       </span>
                       <div className='flex flex-row items-center gap-4'>
@@ -122,7 +119,10 @@ const Cart = ({ toggled, cartProducts, setCartProducts }) => {
                   }, 0)}
               </span>
             </div>
-            <button className='flex items-center justify-center rounded-lg bg-orange-600 p-2 text-xl font-bold'>
+            <button className="flex items-center justify-center rounded-lg bg-orange-600 p-2 text-xl font-bold"
+            onClick={()=>{
+              alert('Ponele que tenes plata y aca te compraste algo')
+            }}>
               Checkout
             </button>
           </div>
