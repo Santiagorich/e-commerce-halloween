@@ -15,16 +15,16 @@ function App() {
   const [cartProducts, setCartProducts] = useState([]);
   const [cartToggled, setCartToggled] = useState(false);
   const [mobileMenuToggled, setMobileMenuToggled] = useState(false);
-  const productGridRef = useRef(null);
-  const discountsRef = useRef(null);
-  const justArrivedRef = useRef(null);
-  const mainRef = useRef(null);
-  const scrollRefs = {
-    productGridRef: productGridRef,
-    discountsRef: discountsRef,
-    justArrivedRef: justArrivedRef,
-    mainRef: mainRef,
-  };
+  // const productGridRef = useRef(null);
+  // const discountsRef = useRef(null);
+  // const justArrivedRef = useRef(null);
+  // const mainRef = useRef(null);
+  // const scrollRefs = {
+  //   productGridRef: productGridRef,
+  //   discountsRef: discountsRef,
+  //   justArrivedRef: justArrivedRef,
+  //   mainRef: mainRef,
+  // };
   return (
     <div className="relative">
       <Cart
@@ -42,12 +42,12 @@ function App() {
           setCartToggled={setCartToggled}
           cartProducts={cartProducts}
           setMobileMenuToggled={setMobileMenuToggled}
-          {...scrollRefs}
+          // {...scrollRefs}
         />
         <div className="mt-24 flex flex-col gap-20">
           <div>
             <Fade triggerOnce>
-              <MainSwiper ref={mainRef} />
+              {/* <MainSwiper ref={mainRef} /> */}
             </Fade>
           </div>
           {/* <Fade
@@ -57,7 +57,7 @@ function App() {
         </Fade> */}
           <Fade triggerOnce>
             <ProductGrid
-              ref={productGridRef}
+              // ref={productGridRef}
 
               setCartProducts={setCartProducts}
               setCartToggled={setCartToggled}
@@ -66,11 +66,11 @@ function App() {
           </Fade>
           <Fade triggerOnce>
 
-            <Discounts ref={discountsRef} />
+            {/* <Discounts ref={discountsRef} /> */}
           </Fade>
           <Fade triggerOnce>
             <JustArrived
-              ref={justArrivedRef}
+              // ref={justArrivedRef}
 
               setCartProducts={setCartProducts}
               setCartToggled={setCartToggled}
