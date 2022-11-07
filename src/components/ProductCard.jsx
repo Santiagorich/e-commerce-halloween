@@ -50,10 +50,10 @@ function ProductCard({
         </div>
         <div className="flex flex-row justify-center items-center gap-2">
         <span className="text-center text-md lg:text-lg font-medium">
-          ${product.price}.99
+          ${product.price}
         </span>
         <span className="text-center text-md text-orange-600 line-through">
-          ${product.price*2}.99
+          ${product.price*2}
         </span>
         </div>
       </div>

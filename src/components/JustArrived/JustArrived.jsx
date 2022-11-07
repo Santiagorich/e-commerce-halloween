@@ -14,21 +14,21 @@ function JustArrived ({setCartProducts, setCartToggled,cartProducts}) {
       id:0,
       name:'Toffee',
       img: 'assets/trick-treat1-img.png',
-      price: 10,
+      price: 10.99,
       description: 'Description here'
     },
     {
       id:1,
       name:'Toffee',
       img: 'assets/trick-treat2-img.png',
-      price: 10,
+      price: 10.99,
       description: 'Description here'
     },
     {
       id:2,
       name:'Toffee',
       img: 'assets/trick-treat3-img.png',
-      price: 10,
+      price: 10.99,
       description: 'Description here'
     }
   ]
