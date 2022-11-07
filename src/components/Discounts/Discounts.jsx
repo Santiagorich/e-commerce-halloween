@@ -12,9 +12,9 @@ function Discounts () {
         <span className='w-full text-center text-lg lg:text-3xl font-semibold'>
           Sobre nuevos productos
         </span>
-        <div className='mt-6 lg:mt-0'>
+        {/* <div className='mt-6 lg:mt-0'>
         <OrangeButton text='Ir a nuevo' />
-        </div>
+        </div> */}
       </div>
     </div>
   )
