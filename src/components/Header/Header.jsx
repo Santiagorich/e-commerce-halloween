@@ -3,11 +3,7 @@ import React from "react";
 function Header({
   setCartToggled,
   cartProducts,
-  productGridRef,
-  discountsRef,
   setMobileMenuToggled,
-  justArrivedRef,
-  mainRef,
 }) {
   return (
     <div className="header fixed top-0 left-0 z-10 flex w-screen flex-row justify-evenly gap-24 py-4">
@@ -18,7 +14,6 @@ function Header({
       <div className="hidden flex-row items-center gap-10 lg:flex">
         <span
           className="cursor-pointer text-lg"
-          onClick={() => mainRef.current.scrollIntoView()}
         >
           Home
         </span>
@@ -26,7 +21,6 @@ function Header({
         <span className="cursor-pointer text-lg">Candy</span>
         <span
           className="cursor-pointer text-lg"
-          onClick={() => justArrivedRef.current.scrollIntoView()}
         >
           New
         </span>
