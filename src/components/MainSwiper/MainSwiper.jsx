@@ -20,24 +20,30 @@ function MainSwiper () {
       title: '#1 FANTASMA MAS ATERRADOR',
       imgdesc: {
         top: 'Labu Raizu',
-        bottom: 'La calabaza viva'
-      }
+        bottom: '$10.99'
+      },
+      topText:'Lo mejor de lo mejor!',
+      description:'Uno de los mejores productos que tenemos en esta tienda! No te decepcionara!'
     },
     {
       img: 'assets/home2-img.png',
       title: '#2 MEJOR DUO',
       imgdesc: {
         top: 'Labu Raizu',
-        bottom: 'La calabaza viva'
-      }
+        bottom: '$10.99'
+      },
+      topText:'Lo mejor de lo mejor!',
+      description:'Uno de los mejores productos que tenemos en esta tienda! No te decepcionara!'
     },
     {
       img: 'assets/home3-img.png',
       title: '#3 OTRO FANTASMA MAS ATERRADOR',
       imgdesc: {
         top: 'Labu Raizu',
-        bottom: 'La calabaza viva'
-      }
+        bottom: '$10.99'
+      },
+      topText:'Lo mejor de lo mejor!',
+      description:'Uno de los mejores productos que tenemos en esta tienda! No te decepcionara!'
     }
   ]
   return (
@@ -53,7 +59,7 @@ function MainSwiper () {
         disableOnInteraction: false
       }}
       pagination={pagination}
-      className=' pb-36'
+      className=' pb-20 pt-10 lg:pb-36 lg:pt-0'
     >
       <SwiperSlide>
         <CustomSlide {...slides[0]} />

@@ -2,6 +2,7 @@ function ProductCard({
   product,
   type = "small",
   tag,
+  discount,
   cartProducts,
   setCartProducts,
   setCartToggled,
@@ -9,7 +10,7 @@ function ProductCard({
   return (
     <div
       className={`productcont group relative flex ${
-        type === "big" ? "h-80 w-full" : "h-60 w-48"
+        type === "big" ? "h-80 w-full" : "h-52 lg:h-60 w-40 lg:w-48"
       } cursor-pointer items-center justify-center overflow-hidden rounded-3xl bg-black`}
       onClick={() => {
         setCartToggled(true);
@@ -39,17 +40,22 @@ function ProductCard({
         <img
           src={product.img}
           alt=""
-          className="mx-auto h-24 w-24 transition-all duration-300 group-hover:-translate-y-2"
+          className="mx-auto h-20 lg:h-28 w-20 lg:w-28 transition-all duration-300 group-hover:-translate-y-2"
         />
         <div className="flex flex-col">
-          <span className="text-center text-xl font-medium">
+          <span className="text-center text-lg lg:text-xl font-medium">
             {product.name}
           </span>
           <span className="text-center text-sm">{product.description}</span>
         </div>
-        <span className="m-2 text-center text-xl font-medium">
-          ${product.price}
+        <div className="flex flex-row justify-center items-center gap-2">
+        <span className="text-center text-md lg:text-lg font-medium">
+          ${product.price}.99
         </span>
+        <span className="text-center text-md text-orange-600 line-through">
+          ${product.price*2}.99
+        </span>
+        </div>
       </div>
 
       {type === "big" ? (

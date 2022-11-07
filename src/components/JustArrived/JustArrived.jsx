@@ -5,8 +5,10 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/keyboard'
 import ProductCard from '../ProductCard'
+import { useMediaQuery } from 'react-responsive'
 
 function JustArrived ({setCartProducts, setCartToggled,cartProducts}) {
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' })
   const products = [
     {
       id:0,
@@ -32,14 +34,15 @@ function JustArrived ({setCartProducts, setCartToggled,cartProducts}) {
   ]
 
   const productsChunks = []
-  for (let i = 0; i < products.length; i += 3) {
-    productsChunks.push(products.slice(i, i + 3))
+  const chunkSize = isTabletOrMobile ? 1 : 3
+  for (let i = 0; i < products.length; i += chunkSize) {
+    productsChunks.push(products.slice(i, i + chunkSize))
   }
 
   SwiperCore.use([Keyboard, Autoplay])
   return (
     <div className='flex flex-col gap-24'>
-      <span className='w-full text-center text-4xl font-semibold'>
+      <span className='w-full text-center lg:text-4xl text-2xl font-semibold'>
         Los recién llegados
       </span>
       <div>
@@ -66,6 +69,7 @@ function JustArrived ({setCartProducts, setCartToggled,cartProducts}) {
                         key={product.id}
                         type='big'
                         tag='New'
+                        discount={true}
                         product={product}
                         setCartProducts={setCartProducts}
                         setCartToggled={setCartToggled}
