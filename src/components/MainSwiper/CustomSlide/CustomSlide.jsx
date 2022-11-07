@@ -27,9 +27,9 @@ function CustomSlide({ img, title, imgdesc,topText,description }) {
             {description}
           </span>
         </div>
-        <div className="mt-8 lg:mt-4 flex flex-col">
+        {/* <div className="mt-8 lg:mt-4 flex flex-col">
           <OrangeButton text="Añadir al carrito" />
-        </div>
+        </div> */}
       </div>
     </div>
   );
