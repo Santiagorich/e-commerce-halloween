@@ -58,17 +58,20 @@ function App() {
           <Fade triggerOnce>
             <ProductGrid
               ref={productGridRef}
+
               setCartProducts={setCartProducts}
               setCartToggled={setCartToggled}
               cartProducts={cartProducts}
             />
           </Fade>
           <Fade triggerOnce>
+
             <Discounts ref={discountsRef} />
           </Fade>
           <Fade triggerOnce>
             <JustArrived
               ref={justArrivedRef}
+
               setCartProducts={setCartProducts}
               setCartToggled={setCartToggled}
               cartProducts={cartProducts}
@@ -105,6 +108,7 @@ function App() {
       <Footer />
     </div>
   );
+
 }
 
 export default App;
